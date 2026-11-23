@@ -1,0 +1,109 @@
+:root {
+    --primary: #003da5;
+    --secondary: #ff6a13;
+    --on-secondary: #ffffff;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background: #f4f6fa;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header, th { transition: background 0.3s; }
+
+header label {
+    margin-right: 0.5rem;
+}
+
+header select {
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 6px;
+}
+
+main {
+    padding: 1rem 2rem;
+}
+
+main h2 {
+    color: var(--primary);
+}
+
+/* ---------- charts ---------- */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+    gap: 1.5rem;
+}
+
+.chart-box {
+    position: relative;
+    height: 320px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.chart-box.tall {
+    height: 520px;
+}
+
+/* ---------- tables ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.45rem 0.8rem;
+    text-align: left;
+}
+
+th {
+    background: var(--secondary);
+    color: var(--on-secondary);
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.table-box {
+    background: #fff;
+    border-radius: 8px;
+    border-top: 4px solid var(--secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+}
+
+.table-box.wide {
+    grid-column: 1 / -1;
+}
+
+.table-box h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.table-box tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--primary) 8%, white);
+}
+
+.table-box tbody tr:hover {
+    background: color-mix(in srgb, var(--secondary) 18%, white);
+}

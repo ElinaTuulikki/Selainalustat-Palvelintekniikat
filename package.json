@@ -1,0 +1,31 @@
+{
+  "name": "liiga-stats",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "tsc && tsc -p client",
+    "start": "node dist/server.js",
+    "dev": "concurrently npm:dev:*",
+    "dev:server-build": "tsc -w",
+    "dev:client-build": "tsc -w -p client",
+    "dev:run": "nodemon --watch dist dist/server.js",
+    "seed": "node dist/seedDb.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Elina Tienhaara",
+  "license": "ISC",
+  "description": "Liiga 2025-2026 statistics: REST API (Express + SQLite) and browser UI (Chart.js)",
+  "dependencies": {
+    "chart.js": "^4.6.1",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "concurrently": "^10.0.7",
+    "nodemon": "^3.1.11",
+    "typescript": "^7.0.2"
+  }
+}

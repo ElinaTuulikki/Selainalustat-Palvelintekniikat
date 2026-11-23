@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output (created by npm run build)
+dist/
+public/js/
+
+# Database (created by npm run seed)
+liiga.db
+liiga.db-journal
+liiga.db-wal
+liiga.db-shm
+
+# Environment and logs
+.env
+.env.*
+*.log
+npm-debug.log*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Documentation
+Documentation/
